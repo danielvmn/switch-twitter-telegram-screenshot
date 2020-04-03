@@ -39,6 +39,8 @@ bot = Bot(token=telegram_api_token)
 auth = tweepy.auth.OAuthHandler(twitter_api_key, twitter_api_secret_key)
 auth.set_access_token(twitter_access_token, twitter_access_token_secret)
 stream = tweepy.Stream(auth, MyStreamListener(), timeout=None)
+
+print('Bot started successfully.')
+
 # Twitter account to filter
 stream.filter(follow=[twitter_filter])
-print('Bot started successfully.')
