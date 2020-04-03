@@ -41,3 +41,4 @@ auth.set_access_token(twitter_access_token, twitter_access_token_secret)
 stream = tweepy.Stream(auth, MyStreamListener(), timeout=None)
 # Twitter account to filter
 stream.filter(follow=[twitter_filter])
+print('Bot started successfully.')
